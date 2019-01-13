@@ -1,0 +1,13 @@
+h1, p{
+    color:#006699;
+}
+h1{
+    font-family:"Comic Sans MS";
+}
+div em{
+    color:red;
+}
+
+div h1:first-child{
+    color: blueviolet;
+}
