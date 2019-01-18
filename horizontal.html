@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Menu</title>
+        <style type="text/css">
+            ul#menu > li{
+                float: left;
+            }
+            ul#menu > li > ul{
+                position: absolute;
+                left: 0px;
+                top: 25px;
+            }
+            ul{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            li{
+                border: 1px solid black;
+                width: 120px;
+                padding: 3px;
+                position: relative;
+            }
+            li:hover {
+                background-color: black;
+                color: white;
+            }
+            /*Submenu*/
+            li > ul{
+                position: absolute;
+                left:126px;
+                top:0px;
+                color:black;
+            }
+        </style>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#menu li ul").hide();
+                $("#menu li").hover(
+                    function(){$(this).children("ul").show();},
+                    function(){$(this).children("ul").hide();}
+                );
+            });
+        </script>
+    </head>
+    <body>
+        <ul id="menu">
+            <li>Home</li>
+            <li>Soluções</li>
+            <li>
+                Industrias
+                <ul>
+                    <li>Educação</li>
+                    <li> Telefonia</li>
+                    <li>Comunicação</li>
+                    <li>Energia
+                        <ul>
+                            <li>Eólica</li>
+                            <li>Solar</li>
+                            <li>Hidráulica</li>
+                            <li>Fóssil</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Cases</li>
+            <li>Contato</li>            
+        </ul>
+    </body>
+</html>
